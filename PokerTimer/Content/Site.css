@@ -1,0 +1,62 @@
+﻿/*
+    #c9c9c9
+    #e3e3e3
+    #9ad3de
+    #89bdd3
+*/
+
+body {
+    margin-top:30px;
+    background:#252839;
+    color:#ffffff;
+}
+
+#clock{
+    border:1px solid #333333;
+    border-radius:10px;
+    font-size:100px;
+    font-weight:800;
+    text-align:center;
+    background:#f2b632;
+}
+
+footer{
+    text-align:center;
+    font-size:15px;
+    font-weight:800;
+}
+
+.panel{
+    text-align:center;
+    font-size:30px;
+    font-weight:800;
+    margin-top:20px;
+    border:1px solid #ffffff;
+    color:#ffffff ;
+    background:#b5b5b7;
+}
+
+.panel-default > .panel-heading{
+    color:#ffffff ;
+    background:#f2b632;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
+}
+
+.settings{
+    text-align:center;
+}
+.settings .btn{
+    width:50%;
+    background:#f2b632;
+    font-size:30px;
+    font-weight:800;
+    color:#ffffff ;
+}
+
+
+
+
