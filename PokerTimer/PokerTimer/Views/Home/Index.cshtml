@@ -1,0 +1,69 @@
+﻿@{
+    ViewBag.Title = "Poker Timer";
+}
+
+
+
+<div class="row">
+    <div class="col-xs-1"></div>
+    <div id="clock" class="col-xs-10">
+            <p>20:00</p>
+    </div>
+    <div class="col-xs-1"></div>
+    <audio>
+        <source id="bellAudio" src="/Content/Bell.wav" />
+    </audio>
+</div>
+<div class="row">
+    <div class="col-xs-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">Blinds</div>
+            <div class="panel-body">
+                10/20
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xs-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">Ante</div>
+            <div class="panel-body">
+                -
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<div class="settings row">
+    <div id="flip"><button class="btn">Start</button></div>
+    <div id="panel">Hello world!</div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        startTimer();
+        $("#flip").click(function () {
+            $("#panel").slideToggle("slow");
+        });
+    });
+
+    var timeLeft = 1 * 60;
+
+    function ringBell() {
+        var audio = document.getElementsByTagName("audio")[0];
+        audio.play();
+    }
+
+    function startTimer() {
+        setInterval(function () {
+            timeLeft -= 1;
+
+            var minutes = Math.floor(timeLeft / 60);
+
+            var seconds = timeLeft - minutes * 60;
+
+            $('#clock').html("<p>" + minutes + ":" + seconds + "</p>");
+        }, 1000)
+    }
+</script>
